@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+<%- include('partials/head') %>
+<body>
+  <%- include('partials/navAlma') %>
+  <div class="container mt-4">
+    <h2>Salida de productos (Almacenista)</h2>
+    <table class="table table-striped align-middle">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th><th>Producto</th><th>Precio</th><th>Stock</th><th>Cantidad a sacar</th><th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% productos.forEach(p => { %>
+        <tr>
+          <td><%= p.idProducto %></td>
+          <td><%= p.nombre %></td>
+          <td>$<%= Number(p.precio).toFixed(2) %></td>
+          <td><%= p.stock %></td>
+          <td>
+            <form action="/salidas/sacar" method="POST" class="d-flex">
+              <input type="hidden" name="idProducto" value="<%= p.idProducto %>">
+              <input type="number" name="cantidad" min="1" max="<%= p.stock %>" class="form-control form-control-sm" required>
+              <button class="btn btn-sm btn-danger ms-2">Sacar</button>
+            </form>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

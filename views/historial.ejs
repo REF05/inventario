@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<%- include('partials/head') %>
+<body>
+  <%- include('partials/nav') %>
+  <div class="container mt-4">
+    <h2>Historial de movimientos</h2>
+
+    
+    <form method="GET" class="row g-2 mb-3">
+      <div class="col-auto">
+        <select name="tipo" class="form-select form-select-sm">
+          <option value="">Todos</option>
+          <option value="ENTRADA" <%= tipo === 'ENTRADA' ? 'selected' : '' %>>Entradas</option>
+          <option value="SALIDA"  <%= tipo === 'SALIDA'  ? 'selected' : '' %>>Salidas</option>
+        </select>
+      </div>
+      <div class="col-auto">
+        <button class="btn btn-sm btn-primary">Filtrar</button>
+      </div>
+    </form>
+
+    <!-- Tabla -->
+    <table class="table table-sm table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>Fecha</th><th>Usuario</th><th>Producto</th><th>Tipo</th><th>Cantidad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% movimientos.forEach(m => { %>
+        <tr>
+          <td><%= new Date(m.fechaHora).toLocaleString('es-MX') %></td>
+          <td><%= m.usuario %></td>
+          <td><%= m.producto %></td>
+          <td>
+            <span class="badge <%= m.tipo === 'ENTRADA' ? 'bg-success' : 'bg-danger' %>">
+              <%= m.tipo %>
+            </span>
+          </td>
+          <td><%= m.cantidad %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
