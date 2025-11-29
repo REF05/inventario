@@ -19,3 +19,9 @@
 
 ## Video demo
 https://drive.google.com/file/d/1F4dwaSLY4rv6C-W7ZVVt2NBwOGrkYWpw/view?usp=sharing
+
+## Conocimiento sql
+https://docs.google.com/document/d/12uhYF0BcTp5Ukp9B_hcbXzV2EXKS8XRkf_7TzlUDSS8/edit?usp=sharing
+
+## Diagrama bd
+https://drive.google.com/file/d/1Or8BhiaLF_sNPO3steVOK65kiCdnfLQC/view?usp=sharing
