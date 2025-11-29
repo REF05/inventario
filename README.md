@@ -1,7 +1,7 @@
 # Inventario Castores
 
 ## IDE 
-- Visual estudio code
+- Visual studio code
   
 ## Tecnologías
 - Node.js v20.11.1
