@@ -1,4 +1,4 @@
-# Inventario Castores 2024
+# Inventario Castores
 
 ## Tecnologías
 - Node.js   
