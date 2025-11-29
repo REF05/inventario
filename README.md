@@ -1,10 +1,13 @@
 # Inventario Castores
 
+## IDE 
+- Visual estudio code
+  
 ## Tecnologías
-- Node.js   
-- Express  
-- MySQL 
-- Bootstrap 
+- Node.js v20.11.1
+- Express @5.1.0
+- MySQL 8.0 CE
+- Bootstrap @5.3.2
 
 ## Instalación
 1. Clona el repo  
